@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Pendant</title>
+  <link rel="stylesheet" href="book.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Dancing+Script&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>Choose Your Pendant Design
+    <button id="cart-btn">🛒 Cart</button>
+  </header>
+<div id="cart-panel">
+  <h2>Your Cart</h2>
+  <div id="cart-items">
+    <p>No items added yet</p>
+  </div>
+  <button id="close-cart">Close</button>
+</div>
+
+
+   <div class="book-container">
+     <div class="book-content">
+      <button class="close-book" onclick="closeBookNow()">✕</button>
+
+    <!-- Left -->
+    <div class="book-left">
+      <img id="productImg" src="fab_collection09-20251102-0001.jpg" alt="Gold Circle Pendant">
+    </div>
+
+    <!-- Right -->
+    <div class="book-right">
+      <h1 id="productTitle">Gold Circle Pendant</h1>
+
+      <div class="price">
+        <span class="discounted" id="book-original">₹999</span>
+        <span class="original" id="book-discounted">₹1499</span>
+      </div>
+      
+      <div class="booking-price">
+        Booking Price: <span id="book-booking">₹300</span>
+      </div>
+
+      <label for="nameInput">Enter Name for Pendant:</label>
+      <input type="text" id="nameInput" placeholder="Type your name..." oninput="updatePreview()">
+      <label for="fontSelect">Choose Font Style:</label>
+<select id="fontSelect" onchange="updateFontPreview()">
+  <option value="'Great Vibes', cursive">Great Vibes</option>
+  <option value="'Pacifico', cursive">Pacifico</option>
+  <option value="'Dancing Script', cursive">Dancing Script</option>
+  <option value="'Roboto Slab', serif">Roboto Slab</option>
+</select>
+
+      <div class="font-preview" id="fontPreview">Your Name</div>
+
+      <div class="buttons">
+        <!-- <button class="add-cart" onclick="addToCart()">Add to Cart</button> -->
+        <button class="book-now" id="openPopupBtn">Book Now</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  
+  <div class="design-section">
+    <div class="design-box">
+      <img src="blue_frog.jpeg" alt="Gold Circle Pendant" class="pendant-image">
+      <div class="design-name">Mangalsutra</div>
+      <button class="book-btn"
+        data-image="fab_collection09-20251102-0001.jpg"
+        data-name="Mangalsutra"
+        data-original="159"
+        data-discounted="99"
+        data-booking="19"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="blue_suit.jpeg" alt="Silver Pendant" class="pendant-image">
+      <div class="design-name">Mangalsutra</div>
+      <button class="book-btn"
+        data-image="2.jpg"
+        data-name="Mangalsutra"
+        data-original="159"
+        data-discounted="109"
+        data-booking="19"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="dark_green_suit.jpeg" alt="Named mangalsutra" class="pendant-image">
+      <div class="design-name">Mangalsutra</div>
+      <button class="book-btn"
+        data-image="3.jpg"
+        data-name="Named mangalsutra"
+        data-original="149"
+        data-discounted="109"
+        data-booking="29"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="green_sleeveless_suit.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Keychain</div>
+      <button class="book-btn"
+        data-image="creation_samiya-20251102-0001.jpg"
+        data-name="Named Keychain"
+        data-original="149"
+        data-discounted="49"
+        data-booking="19"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="fankey_jean_top.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Photo Frame</div>
+      <button class="book-btn"
+        data-image="Screenshot_2025-11-02-12-30-15-35_56a5d7f547b7ec4c705e63bf13c9c197.jpg"
+        data-name="Photo Frame"
+        data-original="359"
+        data-discounted="149"
+        data-booking="49"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="pink_marron_suit.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Wall light</div>
+      <button class="book-btn"
+        data-image="ganpati_gift_gallery-20251102-0001.jpg"
+        data-name="Wall light"
+        data-original="559"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="peach_dress.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Wallet</div>
+      <button class="book-btn"
+        data-image="wallet.jpg"
+        data-name="Customized Wallet"
+        data-original="249"
+        data-discounted="119"
+        data-booking="29"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="flower_print_suit.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Braclet</div>
+      <button class="book-btn"
+        data-image="braclet.jpg"
+        data-name="Named Braclet"
+        data-original="149"
+        data-discounted="79"
+        data-booking="19"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="pink_top.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="red_dotted_dress.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="blue_frog.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="black_blue_suit.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="black_suit.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="black_top.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="western_black_with_shoes.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="printed_plazo.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="yellow_suit.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="red_skirt.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="pink_lace_top.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="top_jeans.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="white_blue_jeans_top.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="white_lined_dress.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="red_lehnga_chuni.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="black_doted_dress.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="red_flower_printed.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="color_option_suit.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="red_full_set.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="red_full.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="white_flower.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="black_lenhga_chuni.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="red_dress.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="red_set.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+    <div class="design-box">
+      <img src="red_purse.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Named bottle</div>
+      <button class="book-btn"
+        data-image="bottle.jpg"
+        data-name="Named bottle"
+        data-original="359"
+        data-discounted="299"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
+    <div class="design-box">
+      <img src="red_dotted_dress.jpeg" alt="Classic Pendant" class="pendant-image">
+      <div class="design-name">Named Crown</div>
+      <!-- <button class="book-btn">Book Now</button> -->
+       <button class="book-btn"
+    data-image="crown.jpg"
+    data-name="Named crown"
+    data-original="199"
+    data-discounted="99"
+    data-booking="49"
+    onclick="openBookNow(this)">Book Now</button>
+ 
+    </div>
+
+  </div>
+
+
+  <!-- <div class="container">
+  <h1>Shipping</h1>
+  <p>Please enter your shipping details.</p>
+  <hr />
+  <div class="form">
+    
+  <div class="fields fields--2">
+    <label class="field">
+      <span class="field__label" for="firstname">First name</span>
+      <input class="field__input" type="text" id="firstname" value="John" />
+    </label>
+    <label class="field">
+      <span class="field__label" for="lastname">Last name</span>
+      <input class="field__input" type="text" id="lastname" value="Doe" />
+    </label>
+  </div>
+  <label class="field">
+    <span class="field__label" for="address">Address</span>
+    <input class="field__input" type="text" id="address" />
+  </label>
+  <label class="field">
+    <span class="field__label" for="country">Country</span>
+    <select class="field__input" id="country">
+      <option value=""></option>
+      <option value="unitedstates">United States</option>
+    </select>
+  </label>
+  <div class="fields fields--3">
+    <label class="field">
+      <span class="field__label" for="zipcode">Zip code</span>
+      <input class="field__input" type="text" id="zipcode" />
+    </label>
+    <label class="field">
+      <span class="field__label" for="city">City</span>
+      <input class="field__input" type="text" id="city" />
+    </label>
+    <label class="field">
+      <span class="field__label" for="state">State</span>
+      <select class="field__input" id="state">
+        <option value=""></option>
+      </select>
+    </label>
+  </div>
+  </div>
+  <hr>
+  <button class="button">Continue</button>
+</div> -->
+
+<!-- <div class="overlay" id="popupOverlay">
+    <div class="popup">
+      <button class="close-btn" onclick="closePopup()">&times;</button>
+      <h2>Shipping Details</h2>
+      <div class="error" id="errorMsg"></div>
+
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="address1" placeholder="Address Line 1" required>
+      <input type="text" id="address2" placeholder="Address Line 2">
+      <input type="text" id="city" placeholder="City" required>
+      <input type="text" id="state" placeholder="State" required>
+      <input type="text" id="zip" placeholder="Postal Code" required>
+
+      <button onclick="submitForm()">Submit</button>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- Book Now Payment Popup -->
+<!-- <div id="upiPopup" class="upi-popup">
+  <div class="upi-content">
+    <button class="close-upi" onclick="closeUpiPopup()">✕</button>
+    <h2>Complete Your Booking</h2>
+    <p>Scan the UPI QR below to pay and upload your photo for customization.</p>
+
+    <img src="qr.png" alt="UPI QR Code" class="upi-qr">
+
+    <label for="imageUpload">Upload Your Photo:</label>
+    <input type="file" id="imageUpload" accept="image/*">
+
+    <button class="confirm-booking" onclick="bookNow()">Confirm Booking</button>
+  </div>
+</div> -->
+
+  <!-- <main class="page">
+    <div class="card">
+      <h3 style="margin:0 0 8px 0">Product: Elegant Pendant</h3>
+      <p style="margin:0 0 14px 0; color:var(--muted)">Amount: ₹ <strong id="productAmount">599</strong></p> -->
+      <!-- <button id="openPopupBtn" class="cta">Enter Shipping Details</button> 
+    </div>
+  </main> -->
+
+  <!-- Overlay / mobile full-page popup -->
+  <div id="addressOverlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" role="document">
+      <div class="modal-header">
+        <div>
+          <div id="modalTitle" class="modal-title">Shipping Address</div>
+          <div class="modal-sub">We will verify before dispatch</div>
+        </div>
+        <button class="ship_close-btn" id="closePopupBtn" aria-label="Close popup">&times;</button>
+      </div>
+
+      <form id="addressForm" class="modal-body" autocomplete="off" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" class="input" type="text" placeholder="Your full name" required />
+        </div>
+
+        <div class="two-col">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" class="input" type="tel" inputmode="tel" placeholder="10-digit phone" maxlength="15" required />
+          </div>
+          <div class="field">
+            <label for="postal">PIN / ZIP</label>
+            <input id="postal" name="postal" class="input" type="text" inputmode="numeric" placeholder="Postal code" maxlength="8" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="address1">Address line 1</label>
+          <input id="address1" name="address1" class="input" type="text" placeholder="House / street / area" required />
+        </div>
+
+        <div class="field">
+          <label for="address2">Address line 2 <span class="small">(optional)</span></label>
+          <input id="address2" name="address2" class="input" type="text" placeholder="Landmark / apartment / colony" />
+        </div>
+
+        <div class="two-col">
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" class="input" type="text" placeholder="City" required />
+          </div>
+          <div class="field">
+            <label for="state">State</label>
+            <input id="state" name="state" class="input" type="text" placeholder="State" required />
+          </div>
+        </div>
+
+        <!-- <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country" class="select">
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>Australia</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Upload photo to confirm order <span class="small">(JPG/PNG, ≤ 5MB)</span></label>
+          <div class="photo-uploader">
+            <div class="photo-preview" id="photoPreview" aria-hidden="true">
+               preview goes here
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 19V7a2 2 0 0 0-2-2H7L5 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" stroke="#c7d2fe" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 13l3 3 5-6 4 5" stroke="#c7d2fe" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div> -->
+
+            <!-- <div style="flex:1;">
+              <input id="photoInput" name="photo" type="file" accept="image/*" style="display:none" />
+              <div style="display:flex; gap:8px; align-items:center;">
+                <button type="button" id="choosePhoto" class="btn-secondary">Choose Photo</button>
+                <div class="small" id="photoName">No file chosen</div>
+              </div>
+              <div class="small" style="margin-top:8px; color:var(--muted)">Photo must be clear — we use it to verify design and personalise the pendant.</div>
+            </div> -->
+          <!-- </div>
+          <div id="photoError" class="error" style="display:none"></div>
+        </div> -->
+
+        <div id="formError" class="error" style="display:none"></div>
+      </form>
+
+      <div class="actions">
+        <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        <button id="confirmBtn" class="btn-primary">Confirm </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="overlay" id="overlay">
+    <div class="payment-popup">
+      <button class="pay_close-btn" onclick="pay_closePopup()">×</button>
+      <h2>Complete Your Payment</h2>
+
+      <div class="pay-type">
+        <h3>Choose Payment Type</h3>
+        <div class="radio-group">
+          <label><input type="radio" name="payType" value="prepaid" checked> Prepaid</label>
+          <label><input type="radio" name="payType" value="cod"> Cash on Delivery</label>
+        </div>
+        <div class="notice" id="codNotice" style="display: none;">
+          COD orders require ₹<span id ="cod">99</span> booking charges before confirmation.
+        </div>
+      </div>
+      <button onclick="confirmPayment()" class="pay_button">Confirm Payment of <span id="pay_amount">0</button>
+    </div>
+  </div>
+<div class="qr-popup">
+  <div class="popup-content">
+    <label for="showQR" class="close-btn-qr">&times;</label>
+    <h3>Scan to Pay</h3>
+    <img src="" id="qrImg" alt="QR Code">
+    <p>Use any UPI app to complete the payment.</p>
+  </div>
+</div>
+  
+  <script src="book.js">
+
+  </script>
+</body>
+</html>
