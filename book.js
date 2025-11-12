@@ -53,24 +53,24 @@ function closeBookNow() {
 //       const name = document.getElementById("nameInput").value.trim();
 //       document.getElementById("fontPreview").textContent = name || "Your Name";
 //     }
-function updateFontPreview() {
-  const input = document.getElementById('nameInput').value || "Your Name";
-  const selectedFont = document.getElementById('fontSelect').value;
-  const preview = document.querySelector('.font-preview');
-  preview.style.fontFamily = selectedFont;
-  preview.textContent = input;
-}
+// function updateFontPreview() {
+//   const input = document.getElementById('nameInput').value || "Your Name";
+//   const selectedFont = document.getElementById('fontSelect').value;
+//   const preview = document.querySelector('.font-preview');
+//   preview.style.fontFamily = selectedFont;
+//   preview.textContent = input;
+// }
 
-document.getElementById('nameInput').addEventListener('input', updateFontPreview);
+// document.getElementById('nameInput').addEventListener('input', updateFontPreview);
 
-    function addToCart() {
-      const name = document.getElementById("nameInput").value.trim();
-      if (!name) {
-        alert("Please enter a name before adding to cart!");
-        return;
-      }
-      alert(`✅ "${name}" pendant added to your cart!`);
-    }
+    // function addToCart() {
+    //   const name = document.getElementById("nameInput").value.trim();
+    //   if (!name) {
+    //     alert("Please enter a name before adding to cart!");
+    //     return;
+    //   }
+    //   alert(`✅ "${name}" pendant added to your cart!`);
+    // }
 
     // function bookNow() {
     //     const fileInput = document.getElementById('imageUpload');
@@ -92,16 +92,16 @@ document.getElementById('nameInput').addEventListener('input', updateFontPreview
 
 
 
-function updatePreview() {
-  let text = document.getElementById("nameInput").value.trim();
-  document.getElementById("fontPreview").textContent = text || "Your Name";
-}
+// function updatePreview() {
+//   let text = document.getElementById("nameInput").value.trim();
+//   document.getElementById("fontPreview").textContent = text || "Your Name";
+// }
 function openUpiPopup() {
-    const name = document.getElementById("nameInput").value.trim();
-      if (!name) {
-        alert("Please enter a name before booking!");
-        return;
-      }
+    // const name = document.getElementById("nameInput").value.trim();
+    //   if (!name) {
+    //     alert("Please enter a name before booking!");
+    //     return;
+    //   }
   document.getElementById("upiPopup").style.display = "flex";
   document.body.style.overflow = "hidden";
 }
@@ -166,9 +166,9 @@ function closeUpiPopup() {
     // confirmAmountSpan.textContent = amountSpan.textContent;
 
     // Open popup (button)
-    // openBtn.addEventListener('click', () => {
-    //   openPopup();
-    // });
+    openBtn.addEventListener('click', () => {
+      openPopup();
+    });
 
     // Close handlers
     closeBtn.addEventListener('click', ship_closePopup);
@@ -260,29 +260,9 @@ function closeUpiPopup() {
       if (!city) return showFormError('City is required.');
       if (!state) return showFormError('State is required.');
 
-      // // Build payload (example)
-      // const payload = {
-      //   fullName, phone, postal, address1, address2: document.getElementById('address2').value.trim(),
-      //   city, state,
-        
-      //   photoName: photo.name,
-      //   // In production, you'd upload the file to server via FormData
-    });
-
-      // Simulate next step: proceed to UPI intent OR send to server
-      // For now we show success and close. Replace with your API/upload flow.
-      // confirmBtn.disabled = true;
-      // confirmBtn.textContent = 'Processing...';
-
-      // Simulated delay (replace with real upload/verification)
-    //   setTimeout(() => {
-    //     confirmBtn.disabled = false;
-    //     confirmBtn.textContent = 'Confirm';
-    //     alert('Details saved. Proceeding to payment (implement UPI intent/upload next).');
-    //     ship_closePopup();
-    //   }, 900);
-    // });
-
+      });
+  
+     
     function showFormError(msg){
       formError.style.display = 'block';
       formError.textContent = msg;
@@ -290,12 +270,7 @@ function closeUpiPopup() {
       overlay.scroll({ top: 0, behavior: 'smooth' });
     }
 
-    // Accessibility: close with Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('open')) closePopup();
-    });
-
-    // Ensure overlay is hidden at start (safety if inline style was forced)
+    
     window.addEventListener('DOMContentLoaded', () => {
       overlay.classList.remove('open');
       overlay.setAttribute('aria-hidden', 'true');
@@ -304,32 +279,44 @@ function closeUpiPopup() {
 
 
     // const overlay = document.getElementById('addressOverlay');
-const previewName = document.getElementById('nameInput'); // name input before shipping
+// const previewName = document.getElementById('nameInput'); // name input before shipping
 
-openBtn.addEventListener('click', () => {
-  const nameValue = previewName.value.trim();
+// openBtn.addEventListener('click', () => {
+//   const nameValue = previewName.value.trim();
 
-  if (!nameValue) {
-    // visually show error or alert
-    alert('Please enter your name in the pendant preview before continuing.');
-    previewName.focus();
-    previewName.style.border = '1px solid #e11d48'; // red border for feedback
-    return; // stop popup
-  }
+//   if (!nameValue) {
+//     // visually show error or alert
+//     alert('Please enter your name in the pendant preview before continuing.');
+//     previewName.focus();
+//     previewName.style.border = '1px solid #e11d48'; // red border for feedback
+//     return; // stop popup
+//   }
 
-  // if filled, reset any red border and open popup
-  else{
-  previewName.style.border = '';
-  openPopup();}
-});
+//   // if filled, reset any red border and open popup
+//   else{
+//   previewName.style.border = '';
+//   openPopup();}
+// });
 const overlay1 = document.getElementById("overlay");
+ const inputs = document.querySelectorAll('#addressForm input[required]');
     const paymentbtn = document.getElementById("confirmBtn");
     const upiList = document.getElementById("upiList");
     const codNotice = document.getElementById("codNotice");
 
     paymentbtn.addEventListener("click", () => {
-      overlay1.classList.add("open");
-      document.body.style.overflow = "hidden";
+      let empty = false;
+      inputs.forEach(input => {
+        if (input.value.trim() === "") empty = true;
+      });
+      if (empty) {
+        alert("Please fill all shipping details before continuing.");
+      } else {
+        // open your payment popup or redirect here
+        overlay1.classList.add("open");
+        document.body.style.overflow = "hidden";
+        // alert("Proceeding to payment...");
+      }
+      // alert("Shipping details submitted successfully!");
     });
 
     function pay_closePopup() {
@@ -403,7 +390,7 @@ document.querySelectorAll("input[name='payType']").forEach((radio) => {
         // document.getElementById("qrAmount").textContent = amount;
         // document.getElementById("bookPopup").style.display = "none";
         document.querySelector(".qr-popup").style.display = "flex";
-        alert(amount);
+        
       }
       // pay_closePopup();
     }

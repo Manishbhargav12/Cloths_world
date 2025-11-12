@@ -27,34 +27,94 @@
 
     <!-- Left -->
     <div class="book-left">
-      <img id="productImg" src="fab_collection09-20251102-0001.jpg" alt="Gold Circle Pendant">
+      <img id="productImg" src="" alt="Gold Circle Pendant">
     </div>
 
     <!-- Right -->
     <div class="book-right">
       <h1 id="productTitle">Gold Circle Pendant</h1>
+      <div class="product-controls">
+  <!-- SIZE SELECTOR -->
+  <div class="group">
+    <h4>Size</h4>
+    <div class="sizes" role="radiogroup" aria-label="Select size">
+      <input type="radio" id="size-xs" name="size" value="XS">
+      <label for="size-xs">XS</label>
 
+      <input type="radio" id="size-s" name="size" value="S">
+      <label for="size-s">S</label>
+
+      <input type="radio" id="size-m" name="size" value="M" checked>
+      <label for="size-m">M</label>
+
+      <input type="radio" id="size-l" name="size" value="L">
+      <label for="size-l">L</label>
+
+      <input type="radio" id="size-xl" name="size" value="XL">
+      <label for="size-xl" title="Out of stock">XL</label>
+
+      <input type="radio" id="size-xl" name="size" value="XXL" disabled>
+      <label for="size-xl" title="Out of stock">2XL</label>
+    </div>
+  </div>
+
+  <!-- COLOR SELECTOR -->
+  <div class="group">
+    <h4>Color</h4>
+
+    <div class="colors" role="radiogroup" aria-label="Select color">
+      <input type="radio" id="col-red" name="color" value="red" checked>
+      <label for="col-red">
+        <span class="swatch" style="background:#b21f2d;"></span>
+        <span class="swatch-label">Red</span>
+      </label>
+
+      <input type="radio" id="col-pink" name="color" value="pink">
+      <label for="col-pink">
+        <span class="swatch" style="background:#ec9bbf;"></span>
+        <span class="swatch-label">Pink</span>
+      </label>
+
+      <input type="radio" id="col-blue" name="color" value="blue">
+      <label for="col-blue">
+        <span class="swatch" style="background:#2b6cb0;"></span>
+        <span class="swatch-label">Blue</span>
+      </label>
+
+      <input type="radio" id="col-green" name="color" value="green">
+      <label for="col-green">
+        <span class="swatch" style="background:#2f855a;"></span>
+        <span class="swatch-label">Green</span>
+      </label>
+
+      <input type="radio" id="col-beige" name="color" value="beige">
+      <label for="col-beige">
+        <span class="swatch" style="background:#f0e1c6;"></span>
+        <span class="swatch-label">Beige</span>
+      </label>
+    </div>
+  </div>
+</div>
       <div class="price">
         <span class="discounted" id="book-original">₹999</span>
         <span class="original" id="book-discounted">₹1499</span>
       </div>
       
       <div class="booking-price">
-        Booking Price: <span id="book-booking">₹300</span>
+        Booking Price: ₹<span id="book-booking">₹300</span>
       </div>
 
-      <label for="nameInput">Enter Name for Pendant:</label>
+      <!-- <label for="nameInput">Enter Name for Pendant:</label>
       <input type="text" id="nameInput" placeholder="Type your name..." oninput="updatePreview()">
       <label for="fontSelect">Choose Font Style:</label>
-<select id="fontSelect" onchange="updateFontPreview()">
-  <option value="'Great Vibes', cursive">Great Vibes</option>
-  <option value="'Pacifico', cursive">Pacifico</option>
-  <option value="'Dancing Script', cursive">Dancing Script</option>
-  <option value="'Roboto Slab', serif">Roboto Slab</option>
-</select>
+      <select id="fontSelect" onchange="updateFontPreview()">
+        <option value="'Great Vibes', cursive">Great Vibes</option>
+        <option value="'Pacifico', cursive">Pacifico</option>
+        <option value="'Dancing Script', cursive">Dancing Script</option>
+        <option value="'Roboto Slab', serif">Roboto Slab</option>
+      </select> -->
 
-      <div class="font-preview" id="fontPreview">Your Name</div>
-
+      <!-- <div class="font-preview" id="fontPreview">Your Name</div> -->
       <div class="buttons">
         <!-- <button class="add-cart" onclick="addToCart()">Add to Cart</button> -->
         <button class="book-now" id="openPopupBtn">Book Now</button>
@@ -65,150 +125,151 @@
 
 
   
-  <div class="design-section">
+ <div class="design-section">
+
     <div class="design-box">
       <img src="blue_frog.jpeg" alt="Gold Circle Pendant" class="pendant-image">
-      <div class="design-name">Mangalsutra</div>
+      <div class="design-name">Midnight Spark Lehenga</div>
       <button class="book-btn"
-        data-image="fab_collection09-20251102-0001.jpg"
-        data-name="Mangalsutra"
-        data-original="159"
-        data-discounted="99"
-        data-booking="19"
+        data-image="blue_frog.jpeg"
+        data-name="Midnight Spark Lehenga"
+        data-original="1599"
+        data-discounted="599"
+        data-booking="60"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="blue_suit.jpeg" alt="Silver Pendant" class="pendant-image">
-      <div class="design-name">Mangalsutra</div>
+      <div class="design-name">Ocean Mist Suit</div>
       <button class="book-btn"
-        data-image="2.jpg"
-        data-name="Mangalsutra"
-        data-original="159"
-        data-discounted="109"
-        data-booking="19"
+        data-image="blue_suit.jpeg"
+        data-name="Ocean Mist Suit"
+        data-original="1299"
+        data-discounted="599"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="dark_green_suit.jpeg" alt="Named mangalsutra" class="pendant-image">
-      <div class="design-name">Mangalsutra</div>
+      <div class="design-name">Emerald Grace Dress</div>
       <button class="book-btn"
-        data-image="3.jpg"
-        data-name="Named mangalsutra"
-        data-original="149"
-        data-discounted="109"
-        data-booking="29"
+        data-image="dark_green_suit.jpeg"
+        data-name="Emerald Grace Dress"
+        data-original="999"
+        data-discounted="499"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="green_sleeveless_suit.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Keychain</div>
+      <div class="design-name">Sage Bloom Gown</div>
       <button class="book-btn"
-        data-image="creation_samiya-20251102-0001.jpg"
-        data-name="Named Keychain"
-        data-original="149"
-        data-discounted="49"
-        data-booking="19"
+        data-image="green_sleeveless_suit.jpeg"
+        data-name="Sage Bloom Gown"
+        data-original="799"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="fankey_jean_top.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Photo Frame</div>
+      <div class="design-name">Urban Chic Denim Jeans</div>
       <button class="book-btn"
-        data-image="Screenshot_2025-11-02-12-30-15-35_56a5d7f547b7ec4c705e63bf13c9c197.jpg"
-        data-name="Photo Frame"
-        data-original="359"
-        data-discounted="149"
+        data-image="fankey_jean_top.jpeg"
+        data-name="Urban Chic Denim Jeans"
+        data-original="699"
+        data-discounted="399"
         data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="pink_marron_suit.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Wall light</div>
+      <div class="design-name">Rose Twilight Dress</div>
       <button class="book-btn"
-        data-image="ganpati_gift_gallery-20251102-0001.jpg"
-        data-name="Wall light"
-        data-original="559"
-        data-discounted="299"
-        data-booking="99"
+        data-image="pink_marron_suit.jpeg"
+        data-name="Rose Twilight Dress"
+        data-original="1099"
+        data-discounted="499"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="peach_dress.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Wallet</div>
+      <div class="design-name">Mint Whisper Co-ord</div>
       <button class="book-btn"
-        data-image="wallet.jpg"
-        data-name="Customized Wallet"
-        data-original="249"
-        data-discounted="119"
-        data-booking="29"
+        data-image="peach_dress.jpeg"
+        data-name="Coral  Kurti Set"
+        data-original="899"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="flower_print_suit.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Braclet</div>
+      <div class="design-name">Coral Dream Kurti Set</div>
       <button class="book-btn"
-        data-image="braclet.jpg"
-        data-name="Named Braclet"
-        data-original="149"
-        data-discounted="79"
-        data-booking="19"
+        data-image="flower_print_suit.jpeg"
+        data-name="Coral Dream Kurti Set"
+        data-original="899"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="pink_top.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Blush Muse Top</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
+        data-image="bottle.jpeg"
+        data-name="Blush Muse Top"
+        data-original="699"
         data-discounted="299"
-        data-booking="99"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="red_dotted_dress.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Ruby Bloom Gown</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="red_dotted_dress.jpeg"
+    data-name="Ruby Bloom Gown"
+    data-original="1599"
+    data-discounted="599"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
     </div>
 
-    <div class="design-box">
+    <!-- <div class="design-box">
       <img src="blue_frog.jpeg" alt="Named bottle" class="pendant-image">
       <div class="design-name">Named bottle</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
+        data-image="blue_frog.jpeg"
         data-name="Named bottle"
         data-original="359"
         data-discounted="299"
         data-booking="99"
         onclick="openBookNow(this)">Book Now</button>
-    </div>
+    </div> -->
 
     <div class="design-box">
       <img src="black_blue_suit.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Mocha Elegance Blouse</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="black_blue_suit.jpeg"
+    data-name="Mocha Elegance Blouse"
+    data-original="799"
+    data-discounted="299"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -216,25 +277,25 @@
 
     <div class="design-box">
       <img src="black_suit.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Noir suit</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
-        data-booking="99"
+        data-image="black_suit.jpeg"
+        data-name="Noir suit"
+        data-original="999"
+        data-discounted="499"
+        data-booking="70"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="black_top.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Velvet dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="black_top.jpeg"
+    data-name="Velvet dress"
+    data-original="1199"
+    data-discounted="599"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -242,25 +303,25 @@
 
     <div class="design-box">
       <img src="western_black_with_shoes.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Onyx Wave Bodycon</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
+        data-image="western_black_with_shoes.jpeg"
+        data-name="Onyx Wave Bodycon"
+        data-original="1299"
+        data-discounted="599"
         data-booking="99"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="printed_plazo.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Dusty Rose Crown Dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="printed_plazo.jpeg"
+    data-name="Dusty Rose Crown Dress"
+    data-original="999"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -268,25 +329,25 @@
 
     <div class="design-box">
       <img src="yellow_suit.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Sunny Bloom Kurti Se</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
-        data-booking="99"
+        data-image="yellow_suit.jpeg"
+        data-name="Sunny Bloom Kurti Se"
+        data-original="899"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="red_skirt.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Ruby Flare Mini Dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="red_skirt.jpeg"
+    data-name="Ruby Flare Mini Dress"
+    data-original="899"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -294,25 +355,25 @@
 
     <div class="design-box">
       <img src="pink_lace_top.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Blush Wrap Top</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
+        data-image="pink_lace_top.jpeg"
+        data-name="Blush Wrap Top"
+        data-original="899"
         data-discounted="299"
-        data-booking="99"
+        data-booking="39"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="top_jeans.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Ivory Ease Shirt & Denim</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="top_jeans.jpeg"
+    data-name="Ivory Ease Shirt & Denim"
+    data-original="1199"
+    data-discounted="599"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -320,25 +381,25 @@
 
     <div class="design-box">
       <img src="white_blue_jeans_top.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Skyline Frill Pants & Top</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
+        data-image="white_blue_jeans_top.jpeg"
+        data-name="Skyline Frill Pants & Top"
+        data-original="1399"
+        data-discounted="599"
         data-booking="99"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="white_lined_dress.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Monochrome Luxe Dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="white_lined_dress.jpeg"
+    data-name="Monochrome Luxe Dress"
+    data-original="1199"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -346,25 +407,25 @@
 
     <div class="design-box">
       <img src="red_lehnga_chuni.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Maroon Majesty Gown</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
+        data-image="red_lehnga_chuni.jpeg"
+        data-name="Maroon Majesty Gown"
+        data-original="1299"
+        data-discounted="599"
         data-booking="99"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="black_doted_dress.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Midnight Dot Charm Dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="black_doted_dress.jpeg"
+    data-name="Midnight Dot Charm Dress"
+    data-original="1399"
+    data-discounted="599"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -372,25 +433,25 @@
 
     <div class="design-box">
       <img src="red_flower_printed.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Coral Fiesta Kurti Set</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
-        data-booking="99"
+        data-image="red_flower_printed.jpeg"
+        data-name="Coral Fiesta Kurti Set"
+        data-original="899"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="color_option_suit.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Wine Whisper Gown</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="color_option_suit.jpeg"
+    data-name="Wine Whisper Gown"
+    data-original="899"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -398,25 +459,25 @@
 
     <div class="design-box">
       <img src="red_full_set.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Crimson Allure Dress Set</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
+        data-image="red_full_set.jpeg"
+        data-name="Crimson Allure Dress Set"
+        data-original="1399"
+        data-discounted="699"
         data-booking="99"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="red_full.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Crimson Allure Dress</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="red_full.jpeg"
+    data-name="Crimson Allure Dress"
+    data-original="1199"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -424,25 +485,25 @@
 
     <div class="design-box">
       <img src="white_flower.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Rose Harmony Saree Set</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
-        data-booking="99"
+        data-image="white_flower.jpeg"
+        data-name="Rose Harmony kurti Set"
+        data-original="1399"
+        data-discounted="399"
+        data-booking="59"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="black_lenhga_chuni.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Emerald Royal Anarkali</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="black_lenhga_chuni.jpeg"
+    data-name="Emerald Royal Anarkali"
+    data-original="1399"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -450,23 +511,23 @@
 
     <div class="design-box">
       <img src="red_dress.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Crimson Cascade Shrug Kurti </div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
-        data-original="359"
-        data-discounted="299"
-        data-booking="99"
+        data-image="red_dress.jpeg"
+        data-name="Crimson Cascade Shrug Set Kurti"
+        data-original="1399"
+        data-discounted="399"
+        data-booking="49"
         onclick="openBookNow(this)">Book Now</button>
     </div>
 
     <div class="design-box">
       <img src="red_set.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Ruby Rush High-Waist Pants</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
+    data-image="red_set.jpeg"
+    data-name="Ruby Rush High-Waist Pants"
     data-original="199"
     data-discounted="99"
     data-booking="49"
@@ -476,10 +537,10 @@
 
     <div class="design-box">
       <img src="red_purse.jpeg" alt="Named bottle" class="pendant-image">
-      <div class="design-name">Named bottle</div>
+      <div class="design-name">Wine Whisper Smocked Dress</div>
       <button class="book-btn"
-        data-image="bottle.jpg"
-        data-name="Named bottle"
+        data-image="red_purse.jpeg"
+        data-name="Wine Whisper Smocked Dress"
         data-original="359"
         data-discounted="299"
         data-booking="99"
@@ -488,13 +549,13 @@
 
     <div class="design-box">
       <img src="mixed_color.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Twilight Ombre Gown</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="mixed_color.jpeg"
+    data-name="Twilight Ombre Gown"
+    data-original="1099"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -502,13 +563,13 @@
 
     <div class="design-box">
       <img src="plaza.jpeg" alt="Classic Pendant" class="pendant-image">
-      <div class="design-name">Named Crown</div>
+      <div class="design-name">Midnight Sapphire Suit Set</div>
       <!-- <button class="book-btn">Book Now</button> -->
        <button class="book-btn"
-    data-image="crown.jpg"
-    data-name="Named crown"
-    data-original="199"
-    data-discounted="99"
+    data-image="plaza.jpeg"
+    data-name="Midnight Sapphire Suit Set"
+    data-original="1099"
+    data-discounted="499"
     data-booking="49"
     onclick="openBookNow(this)">Book Now</button>
  
@@ -719,7 +780,7 @@
           COD orders require ₹<span id ="cod">99</span> booking charges before confirmation.
         </div>
       </div>
-      <button onclick="confirmPayment()" class="pay_button">Confirm Payment of <span id="pay_amount">0</button>
+      <button onclick="confirmPayment()" class="pay_button">Confirm Payment of ₹<span id="pay_amount">0</button>
     </div>
   </div>
 <div class="qr-popup">
