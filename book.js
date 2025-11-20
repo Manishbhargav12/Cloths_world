@@ -446,7 +446,7 @@ document.querySelectorAll("input[name='payType']").forEach((radio) => {
       return;
     }
 
-    alert("Payment submitted successfully!");
+    alert("Unvalid UTR!, Try Again");
     closesub();
   }
 // Close popup
