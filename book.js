@@ -366,6 +366,27 @@ document.querySelectorAll("input[name='payType']").forEach((radio) => {
     });
 
     function confirmPayment() {
+      let timeLeft = 119; // 1.59 minutes in seconds
+
+  const timerEl = document.getElementById("timer");
+
+  const countdown = setInterval(() => {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    timerEl.textContent =
+      minutes.toString().padStart(2, "0") + ":" +
+      seconds.toString().padStart(2, "0");
+
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      timerEl.textContent = "EXPIRED";
+      document.querySelector(".sub-btn").style.display = "none";
+      timerEl.style.color = "red";
+    }
+
+    timeLeft--;
+  }, 1000);
       // const selectedUPI = document.querySelector(".upi-option.selected");
       const paymentType = document.querySelector("input[name='payType']:checked").value;
       const payeeVPA = "BHARATPE.8002960419@fbpe"; // Replace with actual UPI ID
@@ -399,7 +420,37 @@ document.querySelectorAll("input[name='payType']").forEach((radio) => {
     document.querySelector(".close-btn-qr").addEventListener("click", () => {
       document.querySelector(".qr-popup").style.display = "none";
     })
+
+
+
+    document.querySelector(".sub-btn").addEventListener("click", () => {;
+      document.getElementById("popupBg").style.display = "flex";
+      console.log("Clicked submit");
+  })
+
+  function closesub() {
+    document.getElementById("popupBg").style.display = "none";
+  }
+
+  function submitPayment() {
+    const screenshot = document.getElementById("screenshot").files.length;
+    const utr = document.getElementById("utr").value.trim();
+
+    if (!screenshot) {
+      alert("Upload screenshot first.");
+      return;
+    }
+
+    if (utr.length < 6) {
+      alert("Enter a valid UTR number.");
+      return;
+    }
+
+    alert("Payment submitted successfully!");
+    closesub();
+  }
 // Close popup
 // function closePopup(id) {
 //   document.getElementById(id).style.display = "none";
 // }
+

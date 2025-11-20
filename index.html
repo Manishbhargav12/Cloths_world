@@ -575,6 +575,62 @@
  
     </div>
 
+    <div class="design-box">
+      <img src="white_blazzer.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Urban Chic Wool Coat </div>
+      <button class="book-btn"
+        data-image="white_blazzer.jpeg"
+        data-name="Urban Chic Wool Coat "
+        data-original="759"
+        data-discounted="499"
+        data-booking="99"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+    <div class="design-box">
+      <img src="pink_crop_sweater.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Blush Feather Crop Sweater</div>
+      <button class="book-btn"
+        data-image="pink_crop_sweater.jpeg"
+        data-name="Blush Feather Crop Sweater"
+        data-original="459"
+        data-discounted="299"
+        data-booking="79"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+    <div class="design-box">
+      <img src="white_fur_sweater.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">WinterKnits Fur Sweater</div>
+      <button class="book-btn"
+        data-image="white_fur_sweater.jpeg"
+        data-name="WinterKnits Fur Sweater"
+        data-original="559"
+        data-discounted="399"
+        data-booking="89"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+    <div class="design-box">
+      <img src="fur_coat.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Pink Furry Hoodie Jacket</div>
+      <button class="book-btn"
+        data-image="fur_coat.jpeg"
+        data-name="Pink Furry Hoodie Jacket"
+        data-original="899"
+        data-discounted="399"
+        data-booking="79"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+    <div class="design-box">
+      <img src="winter_jacket.jpeg" alt="Named bottle" class="pendant-image">
+      <div class="design-name">Beige Classic Long Coat</div>
+      <button class="book-btn"
+        data-image="winter_jacket.jpeg"
+        data-name="Beige Classic Long Coat"
+        data-original="599"
+        data-discounted="399"
+        data-booking="79"
+        onclick="openBookNow(this)">Book Now</button>
+    </div>
+
   </div>
 
 
@@ -789,9 +845,27 @@
     <h3>Scan to Pay</h3>
     <img src="" id="qrImg" alt="QR Code">
     <p>Use any UPI app to complete the payment.</p>
+    <div class="timer" id="timer">01:59</div>
+    <button class="sub-btn" >Make Payment</button>
   </div>
 </div>
-  
+
+
+  <div class="popup-bg" id="popupBg">
+  <div class="popup-sub">
+    <h3>Upload Payment Screenshot</h3>
+
+    <input type="file" class="sub" id="screenshot" accept="image/*">
+
+    <input type="text" class="sub" id="utr" placeholder="Enter UTR Number">
+   <div class="sub-buttons">
+    <button id="submit-bt" class="sub-bt" onclick="submitPayment()">Submit</button>
+
+    <button id="close-bt" class="sub-bt" onclick="closesub()">Close</button>
+    </div>
+  </div>
+</div>
+
   <script src="book.js">
 
   </script>
